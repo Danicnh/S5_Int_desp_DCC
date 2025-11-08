@@ -30,8 +30,7 @@ jobs:
           command: |
             railway link -p "$RAILWAY_PROJECT_ID" --token "$RAILWAY_TOKEN"
             railway up --service "$RAILWAY_SERVICE_ID" --root bankchurn-api --detach --token "$RAILWAY_TOKEN"
-            cd bankchurn-api
-            railway up --service "$RAILWAY_SERVICE_ID" --detach --token "$RAILWAY_TOKEN" 
+            
 
 
 tags_only: &tags_only
