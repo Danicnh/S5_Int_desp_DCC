@@ -28,9 +28,9 @@ jobs:
       - run:
           name: Deploy to Railway App
           command: |
-            railway link -p "$RAILWAY_PROJECT_ID" --token "$RAILWAY_TOKEN"
-            railway up --service "$RAILWAY_SERVICE_ID" --root bankchurn-api --detach --token "$RAILWAY_TOKEN"
-            
+            cd bankchurn-api
+            railway up --service=virtuous-analysis
+            railway up --detach
 
 
 tags_only: &tags_only
@@ -49,3 +49,4 @@ workflows:
             branches:
               only:
                 - main
+
